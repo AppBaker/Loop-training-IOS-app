@@ -13,6 +13,11 @@
 		9938A3AD2408EEA6003B713E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9938A3AB2408EEA6003B713E /* Main.storyboard */; };
 		9938A3AF2408EEAE003B713E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9938A3AE2408EEAE003B713E /* Assets.xcassets */; };
 		9938A3B22408EEAE003B713E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9938A3B02408EEAE003B713E /* LaunchScreen.storyboard */; };
+		9938A3BB2408F84D003B713E /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938A3BA2408F84D003B713E /* TrainingModel.swift */; };
+		9938A3BE2408FBEB003B713E /* TrainingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938A3BD2408FBEB003B713E /* TrainingTableViewController.swift */; };
+		9938A3C22408FC20003B713E /* TrainingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938A3C02408FC20003B713E /* TrainingTableViewCell.swift */; };
+		9938A3C32408FC20003B713E /* TrainingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9938A3C12408FC20003B713E /* TrainingTableViewCell.xib */; };
+		9938A3C524093668003B713E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938A3C424093668003B713E /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		9938A3AE2408EEAE003B713E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9938A3B12408EEAE003B713E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9938A3B32408EEAE003B713E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9938A3BA2408F84D003B713E /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
+		9938A3BD2408FBEB003B713E /* TrainingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewController.swift; sourceTree = "<group>"; };
+		9938A3C02408FC20003B713E /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
+		9938A3C12408FC20003B713E /* TrainingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingTableViewCell.xib; sourceTree = "<group>"; };
+		9938A3C424093668003B713E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,44 @@
 		9938A3A42408EEA6003B713E /* Loop training */ = {
 			isa = PBXGroup;
 			children = (
+				9938A3BF2408FBF5003B713E /* Controller */,
+				9938A3BC2408FBC2003B713E /* View */,
+				9938A3B92408F822003B713E /* Model */,
 				9938A3A52408EEA6003B713E /* AppDelegate.swift */,
 				9938A3A72408EEA6003B713E /* SceneDelegate.swift */,
-				9938A3A92408EEA6003B713E /* ViewController.swift */,
 				9938A3AB2408EEA6003B713E /* Main.storyboard */,
 				9938A3AE2408EEAE003B713E /* Assets.xcassets */,
 				9938A3B02408EEAE003B713E /* LaunchScreen.storyboard */,
 				9938A3B32408EEAE003B713E /* Info.plist */,
 			);
 			path = "Loop training";
+			sourceTree = "<group>";
+		};
+		9938A3B92408F822003B713E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9938A3BA2408F84D003B713E /* TrainingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9938A3BC2408FBC2003B713E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9938A3C02408FC20003B713E /* TrainingTableViewCell.swift */,
+				9938A3C12408FC20003B713E /* TrainingTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9938A3BF2408FBF5003B713E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9938A3BD2408FBEB003B713E /* TrainingTableViewController.swift */,
+				9938A3A92408EEA6003B713E /* ViewController.swift */,
+				9938A3C424093668003B713E /* TimerViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9938A3B22408EEAE003B713E /* LaunchScreen.storyboard in Resources */,
+				9938A3C32408FC20003B713E /* TrainingTableViewCell.xib in Resources */,
 				9938A3AF2408EEAE003B713E /* Assets.xcassets in Resources */,
 				9938A3AD2408EEA6003B713E /* Main.storyboard in Resources */,
 			);
@@ -139,8 +179,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9938A3AA2408EEA6003B713E /* ViewController.swift in Sources */,
+				9938A3BE2408FBEB003B713E /* TrainingTableViewController.swift in Sources */,
 				9938A3A62408EEA6003B713E /* AppDelegate.swift in Sources */,
+				9938A3C524093668003B713E /* TimerViewController.swift in Sources */,
 				9938A3A82408EEA6003B713E /* SceneDelegate.swift in Sources */,
+				9938A3BB2408F84D003B713E /* TrainingModel.swift in Sources */,
+				9938A3C22408FC20003B713E /* TrainingTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
