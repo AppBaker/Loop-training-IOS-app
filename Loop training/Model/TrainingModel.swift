@@ -13,14 +13,22 @@ struct Training {
     var loops: [TrainingLoop] {
         var array = [TrainingLoop]()
         for index in 1...numbersOfLoop {
-            array.append(TrainingLoop(loop: index, time: nil, isDone: false))
+            array.append(TrainingLoop(loop: index, time: nil))
         }
         return array
     }
 }
 
-struct TrainingLoop {
+class TrainingLoop {
     var loop: Int
     var time: TimeInterval?
-    var isDone: Bool
+    var isDone = false
+    
+    func doneLoop() {
+        isDone = true
+    }
+    
+    init(loop: Int, time: TimeInterval?) {
+        self.loop = loop
+    }
 }

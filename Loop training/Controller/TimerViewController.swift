@@ -10,7 +10,7 @@ import UIKit
 
 class TimerViewController: UIViewController {
     
-    var time = 60
+    var time = 55
     var height : CGFloat = 0
     
     @IBOutlet weak var timeLabel: UILabel!
@@ -22,41 +22,29 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var stopButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        heightConstraint.constant = height
+        
+        timeLabel.text = "\(time)"
+        
+        heightConstraint.constant = 0
         let deltaHeight = self.view.bounds.height / CGFloat(time)
         
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             DispatchQueue.main.async {
+                self.time -= 1
                 self.height += deltaHeight
                 self.timeLabel.text = "\(self.time)"
                 
+                self.heightConstraint.constant = self.height
                 
-                
-                UIView.animate(withDuration: 1) {
-                    
-                    self.heightConstraint.constant = self.height
-                }
                 if self.time == 0 {
                     timer.invalidate()
+                    self.dismiss(animated: true, completion: nil)
                 }
-                self.time -= 1
             }
         }
     }
     
     @IBAction func stopButtonPressed(_ sender: UIButton) {
-        
+        dismiss(animated: true, completion: nil)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
