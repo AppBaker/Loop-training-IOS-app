@@ -17,6 +17,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var restTimeStepper: UIStepper!
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        stepper.value = 10
+        restTimeStepper.value = 55
         startButton.layer.cornerRadius = startButton.frame.height/2
         startButton.clipsToBounds = true
     }
