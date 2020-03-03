@@ -34,6 +34,7 @@
 		9938A3C02408FC20003B713E /* TrainingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingTableViewCell.swift; sourceTree = "<group>"; };
 		9938A3C12408FC20003B713E /* TrainingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrainingTableViewCell.xib; sourceTree = "<group>"; };
 		9938A3C424093668003B713E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		9938A3C6240E31BA003B713E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +51,7 @@
 		9938A3992408EEA6003B713E = {
 			isa = PBXGroup;
 			children = (
+				9938A3C6240E31BA003B713E /* README.md */,
 				9938A3A42408EEA6003B713E /* Loop training */,
 				9938A3A32408EEA6003B713E /* Products */,
 			);
